@@ -1,3 +1,22 @@
+:root {
+  --clr-main: #596d48;
+  --clr-input-border: #e5e7eb;
+  --clr-input-error: #fc2121;
+  --clr-form-text: #1f2937;
+  --clr-body-text: black;
+
+  --ff-logo: Norse;
+  --ff-main: Monsterrat;
+
+  --fs-logo-size: 4em;
+  --fs-form-label: 1em;
+  --fs-form-input: 1em;
+  --fs-body-400: 1.5em;
+  --fs-body-200: 0.5em;
+
+  --bg-img: url(/img/halie-west-25xggax4bSA-unsplash.jpg);
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -122,3 +141,20 @@ select {
 }
 
 /* Main Styling */
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  font-family: var(--ff-main);
+}
+
+header {
+  background-image: var(--bg-img);
+  background-size: cover;
+  font-family: var(--ff-logo);
+  font-size: var(--fs-logo-size);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
