@@ -286,6 +286,15 @@ input{
   padding: 0.3rem;
 }
 
+.error {
+  color: var(--clr-input-error);
+  font-size: var(--fs-body-200);
+  font-weight: 600;
+
+  margin-top: 0.2rem;
+  margin-left: 1rem;
+}
+
 @media only screen and (max-width: 900px) {
   body {
     display: block;
