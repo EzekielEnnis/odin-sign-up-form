@@ -198,7 +198,7 @@ main {
   font-weight: 700;
 
   display: grid;
-  grid-template-rows: repeat(3,1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .main-text {
@@ -223,16 +223,16 @@ fieldset {
   border: none;
   color: var(--clr-form-text);
 
-  padding-top: calc(var(--fs-form-legend)*2);
+  padding-top: calc(var(--fs-form-legend) * 2);
   padding-bottom: 1rem;
 
   background-color: white;
-  box-shadow: 0px 0px 10px 0px  #bbb;
+  box-shadow: 0px 0px 10px 0px #bbb;
 
   position: relative;
   & legend {
     position: absolute;
-    left:var(--padding);
+    left: var(--padding);
     top: var(--fs-form-legend);
 
     font-size: var(--fs-form-legend);
@@ -242,7 +242,7 @@ fieldset {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 1rem;
-    
+
     & li {
       display: flex;
       flex-direction: column;
@@ -253,7 +253,7 @@ fieldset {
   }
 }
 
-form button{
+form button {
   margin-left: var(--padding);
   margin-top: 2rem;
   padding: 1rem 3rem;
@@ -281,7 +281,7 @@ label {
   letter-spacing: 0.08rem;
 }
 
-input{
+input {
   font-weight: 400;
   font-size: var(--fs-form-input);
   padding: 0.3rem;
@@ -297,7 +297,7 @@ input{
   margin-left: 1rem;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
   body {
     display: block;
   }
@@ -305,4 +305,19 @@ input{
     height: 40vh;
     grid-template-rows: repeat(3, 1fr);
   }
+  main {
+    height: 80vh;
+  }
+  .main-text{margin: 2rem;}
+  
+  @media only screen and (max-width: 500px) {
+    fieldset {
+      width: 100vw;
+  
+      & ul {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
 }
+
