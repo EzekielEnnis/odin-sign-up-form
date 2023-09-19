@@ -1,6 +1,6 @@
 // Check valid
 const checkFirstName = (e) => {
-    errorElement(e, "one name only")
+    
     // TODO - Check if there is only one word
     // TODO - Check if there is currently an error message to avoid doubling up
 }
@@ -26,6 +26,7 @@ const checkPassword = (e) => {
 
 //Create error text element
 const errorElement = (e, text) => {
+    if (e.parentElement.lastChild.className == "error") e.parentElement.lastChild.remove()
     let errorMsg = document.createElement("p")
     errorMsg.classList.add("error")
     errorMsg.textContent = `* ${text}`
