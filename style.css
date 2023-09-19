@@ -3,16 +3,20 @@
   --clr-input-border: #e5e7eb;
   --clr-input-error: #fc2121;
   --clr-form-text: #1f2937;
-  --clr-body-text: black;
+  --clr-main-text: black;
+  --clr-main-bg: #f9fafb;
 
   --ff-logo: Norse;
   --ff-main: Monsterrat;
 
   --fs-logo: 6rem;
-  --fs-form-label: 1rem;
+  --fs-form-label: 0.8rem;
   --fs-form-input: 1rem;
-  --fs-body-400: 1.5rem;
-  --fs-body-200: 0.5rem;
+  --fs-form-legend: 1.4rem;
+  --fs-body-400: 1.3rem;
+  --fs-body-200: 0.8rem;
+
+  --padding: 2.5rem;
 
   --bg-img: url(/img/halie-west-25xggax4bSA-unsplash.jpg);
 }
@@ -141,16 +145,15 @@ select {
 }
 
 /* Main Styling */
-
 body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   font-family: var(--ff-main);
 }
-
 header {
   background-image: var(--bg-img);
   background-size: cover;
+
   font-family: var(--ff-logo);
   font-size: var(--fs-logo);
   color: white;
@@ -182,5 +185,113 @@ header {
     & :not(.bg-banner) {
       z-index: 1;
     }
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+main {
+  background-color: var(--clr-main-bg);
+  font-weight: 700;
+
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+}
+
+.main-text {
+  width: min(80vw, 700px);
+  font-size: var(--fs-body-400);
+
+  margin-inline: var(--padding);
+  margin-bottom: max(2rem, 0.5rem);
+  align-self: flex-end;
+
+  > * {
+    margin-bottom: 0.2rem;
+  }
+
+  & :last-child {
+    margin-top: 1.5rem;
+  }
+}
+
+fieldset {
+  padding-inline: var(--padding);
+  border: none;
+  color: var(--clr-form-text);
+
+  padding-top: calc(var(--fs-form-legend)*2);
+  padding-bottom: 1rem;
+
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px  #bbb;
+
+  position: relative;
+  & legend {
+    position: absolute;
+    left:var(--padding);
+    top: var(--fs-form-legend);
+
+    font-size: var(--fs-form-legend);
+  }
+
+  & ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
+    
+    & li {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0.8rem;
+      margin-left: 0;
+    }
+  }
+}
+
+form button{
+  margin-left: var(--padding);
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+
+  background-color: var(--clr-main);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: var(--fs-body-200);
+}
+
+.log-in {
+  margin-left: var(--padding);
+  font-size: var(--fs-body-200);
+  margin-top: 2rem;
+
+  & a {
+    text-decoration: none;
+    color: var(--clr-main);
+  }
+}
+
+label {
+  font-size: var(--fs-form-label);
+  letter-spacing: 0.08rem;
+}
+
+input{
+  font-weight: 400;
+  font-size: var(--fs-form-input);
+  padding: 0.3rem;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    display: block;
+  }
+  header {
+    height: 40vh;
+    grid-template-rows: repeat(3, 1fr);
   }
 }
