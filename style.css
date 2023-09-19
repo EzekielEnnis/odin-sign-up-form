@@ -90,49 +90,49 @@ select {
 
 @font-face {
   font-family: Monsterrat;
-  src: url(fonts/montserratalternates-regular-webfont.woff);
+  src: url(fonts/montserrat-regular-webfont.woff);
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: Monsterrat;
-  src: url(fonts/montserratalternates-semibold-webfont.woff);
+  src: url(fonts/montserrat-semibold-webfont.woff);
   font-style: normal;
   font-weight: 600;
 }
 
 @font-face {
   font-family: Monsterrat;
-  src: url(fonts/montserratalternates-semibolditalic-webfont.woff);
+  src: url(fonts/montserrat-semibolditalic-webfont.woff);
   font-style: italic;
   font-weight: 600;
 }
 
 @font-face {
   font-family: Monsterrat;
-  src: url(fonts/montserratalternates-bold-webfont.woff);
+  src: url(fonts/montserrat-bold-webfont.woff);
   font-style: normal;
   font-weight: 700;
 }
 
 @font-face {
   font-family: Monsterrat;
-  src: url(fonts/montserratalternates-bolditalic-webfont.woff);
+  src: url(fonts/montserrat-bolditalic-webfont.woff);
   font-style: italic;
   font-weight: 700;
 }
 
 @font-face {
   font-family: Monsterrat;
-  src: url(fonts/montserratalternates-black-webfont.woff);
+  src: url(fonts/montserrat-black-webfont.woff);
   font-style: normal;
   font-weight: 800;
 }
 
 @font-face {
   font-family: Monsterrat;
-  src: url(fonts/montserratalternates-blackitalic-webfont.woff);
+  src: url(fonts/montserrat-blackitalic-webfont.woff);
   font-style: italic;
   font-weight: 800;
 }
