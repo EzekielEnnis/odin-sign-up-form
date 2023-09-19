@@ -12,6 +12,7 @@
   --fs-logo: 6rem;
   --fs-form-label: 0.8rem;
   --fs-form-input: 1rem;
+  --fs-form-error: 0.8rem;
   --fs-form-legend: 1.4rem;
   --fs-body-400: 1.3rem;
   --fs-body-200: 0.8rem;
@@ -284,11 +285,12 @@ input{
   font-weight: 400;
   font-size: var(--fs-form-input);
   padding: 0.3rem;
+  margin-bottom: 1.2rem;
 }
 
 .error {
   color: var(--clr-input-error);
-  font-size: var(--fs-body-200);
+  font-size: var(--fs-form-error);
   font-weight: 600;
 
   margin-top: 0.2rem;
