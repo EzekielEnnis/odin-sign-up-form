@@ -20,6 +20,12 @@ const checkEmail = (e) => {
 
 // Check valid password
 const checkPassword = (e) => {
+  if (!e.value.match(/[A-Z]/) || !e.value.match(/[1-9]/) || !e.value.match(/[a-z]/)) {
+    errorElement(
+      e,
+      "must contain at least one: digit, upper and lower case letter"
+    );
+  } else checkRemoveElement(e);
   
 };
 
