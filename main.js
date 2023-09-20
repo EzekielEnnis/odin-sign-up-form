@@ -1,4 +1,4 @@
-// Check valid
+// Check valid first or last name
 const checkName = (e) => {
   const invalidCharacters = /^[a-zA-Z]*$/g;
 
@@ -7,18 +7,30 @@ const checkName = (e) => {
       e,
       "field can't contain numbers or special characters(!, @, #, $)"
     );
-  } else checkRemoveElement(e)
+  } else checkRemoveElement(e);
 };
 
-// Check valid
+// Check valid email
 const checkEmail = (e) => {
-  // TODO - Check if there is only one word
+  if (!e.value.match(/\@?\./)) {
+    errorElement(e, "please use valid email format");
+  }
+  else checkRemoveElement(e);
 };
 
-// Check valid
+// Check valid password
 const checkPassword = (e) => {
-  // TODO - Check if there is only one word
+  
 };
+
+//Check valid confirm password
+const checkConfPassword = (confPass, password) => {
+  
+    if (confPass.value !== password.value){
+      errorElement(confPass, "doesn't match password")
+    }
+    else checkRemoveElement(confPass);
+  };
 
 const checkRemoveElement = (e) => {
   if (e.parentElement.lastChild.className == "error") {
@@ -51,16 +63,16 @@ inputs.forEach((input) => {
         checkName(e.target);
         break;
       case "email":
-        checkLastName(e.target);
+        checkEmail(e.target);
         break;
-      case "checkPassword":
-        checkLastName(e.target);
+      case "password":
+        checkPassword(e.target);
+        const confPass = document.querySelector("#confirmPass")
+        checkConfPassword(confPass, e.target)
         break;
-      case "lastName":
-        checkLastName(e.target);
-        break;
-      case "lastName":
-        checkLastName(e.target);
+      case "confirmPass":
+        const password = document.querySelector("#password")
+        checkConfPassword(e.target, password);
         break;
     }
   });

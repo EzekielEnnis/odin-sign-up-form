@@ -198,7 +198,7 @@ main {
   font-weight: 700;
 
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 40vh);
 }
 
 .main-text {
@@ -307,6 +307,7 @@ input {
   }
   main {
     height: 80vh;
+    grid-template-rows: repeat(3, 1fr);
   }
   .main-text{margin: 2rem;}
   
