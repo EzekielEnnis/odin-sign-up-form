@@ -23,7 +23,7 @@ const checkPassword = (e) => {
   if (!e.value.match(/[A-Z]/) || !e.value.match(/[1-9]/) || !e.value.match(/[a-z]/)) {
     errorElement(
       e,
-      "must contain at least one: digit, upper and lower case letter"
+      "must contain at least one digit and one lower and uppercase letter"
     );
   } else checkRemoveElement(e);
   
@@ -55,8 +55,11 @@ const errorElement = (e, text) => {
   e.style.cssText = "margin-bottom: 0;";
 };
 
-//Toggle submit button if there are any errors
-const toggleBtn = (e) => {};
+//Check for errors before being able to submit
+const checkSubmit = (e) => {
+  const errorMsg = document.querySelector(".error")
+  if (errorMsg !== null) e.preventDefault();
+};
 
 const inputs = document.querySelectorAll("input");
 inputs.forEach((input) => {
@@ -83,3 +86,6 @@ inputs.forEach((input) => {
     }
   });
 });
+
+const submitBtn = document.querySelector("[type=submit]")
+submitBtn.addEventListener("click", e => checkSubmit(e))
